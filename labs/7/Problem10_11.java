@@ -1,5 +1,9 @@
 import javafx.scene.shape.Circle;
+<<<<<<< HEAD
 class Circle2D {
+=======
+class Circle2D  extends GeometricObject {
+>>>>>>> e3e9e1d7f45d8d57e27fb7cc906cf478c7d6ffb4
 	
 	double x;
 	double y;
@@ -43,6 +47,7 @@ class Circle2D {
         return 2 * radius * Math.PI;
 
     }
+<<<<<<< HEAD
     public double distance(double x, double y) {
     	return Math.sqrt((this.x - x) * (this.x - x) + (this.y - y) * (this.y - y));
     }
@@ -51,6 +56,12 @@ class Circle2D {
         double distance = distance(circle2D.x, circle2D.y);
 
         if (distance <= this.radius - circle2D.radius) {
+=======
+    public boolean contains(Circle2D circle2D) {
+        double distance = getPoint().distance(circle2D.x, circle2D.y);
+
+        if (distance <= Math.abs(this.radius - circle2D.radius)) {
+>>>>>>> e3e9e1d7f45d8d57e27fb7cc906cf478c7d6ffb4
             return true;
         } else {
             return false;
@@ -74,7 +85,11 @@ class Circle2D {
     }
 
     public boolean overlaps(Circle2D circle2D) {
+<<<<<<< HEAD
         double distance = distance(circle2D.x, circle2D.y);
+=======
+        double distance = getPoint().distance(circle2D.x, circle2D.y);
+>>>>>>> e3e9e1d7f45d8d57e27fb7cc906cf478c7d6ffb4
 
         if (distance  <= this.radius + circle2D.radius)
             return true;
@@ -83,6 +98,13 @@ class Circle2D {
 
     }
 
+<<<<<<< HEAD
+=======
+    private MyPoint getPoint() {
+        return new MyPoint(this.x, this.y);
+    }
+
+>>>>>>> e3e9e1d7f45d8d57e27fb7cc906cf478c7d6ffb4
     public String toString() {
         return "Circle2D{" +
                 "x=" + x +
@@ -93,7 +115,11 @@ class Circle2D {
 
     public boolean contains(double x, double y) {
 
+<<<<<<< HEAD
         double distance = distance(x, y);
+=======
+        double distance = getPoint().distance(x, y);
+>>>>>>> e3e9e1d7f45d8d57e27fb7cc906cf478c7d6ffb4
 
         if (distance <= radius) return true;
         else return false;
@@ -115,5 +141,8 @@ public class Problem10_11 {
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e3e9e1d7f45d8d57e27fb7cc906cf478c7d6ffb4
