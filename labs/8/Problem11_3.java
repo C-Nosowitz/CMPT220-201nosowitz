@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 
+// JA: This does not compile
 class Account {
 	
 	private int id;
